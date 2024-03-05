@@ -13,6 +13,6 @@ interface WatchRepository {
     val page4 : List<Watch>
     val page5 : List<Watch>
     suspend fun getAllWatches(page: Int = 1):ApiResponse
-    suspend fun searchWatches(model: String): ApiResponse
+    suspend fun searchWatches(model: String?): ApiResponse
 
 }

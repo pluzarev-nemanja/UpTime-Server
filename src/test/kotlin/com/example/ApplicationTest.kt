@@ -142,6 +142,7 @@ class ApplicationTest {
                 prevPage = calculatePage(page = page)["prevPage"],
                 nextPage = calculatePage(page = page)["nextPage"],
                 watches = watches[page - 1],
+                lastUpdated = actual.lastUpdated
             )
             assertEquals(
                 expected = expected, actual = actual

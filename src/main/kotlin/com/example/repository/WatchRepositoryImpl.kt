@@ -20,7 +20,7 @@ class WatchRepositoryImpl : WatchRepository {
     override val page1 = listOf(
         Watch(
             id = 1,
-            image = "images/daytona.jpg",
+            image = "/images/daytona.jpg",
             rating = 5.0,
             brand = "Rolex",
             model = "Cosmograph Daytona",
@@ -39,7 +39,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 2,
-            image ="images/casio.jpg",
+            image ="/images/casio.jpg",
             rating = 3.8,
             brand = "Casio",
             model = "Vintage-A158WETG-9AEF",
@@ -58,7 +58,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 3,
-            image ="images/explorer.jpg",
+            image ="/images/explorer.jpg",
             rating = 3.2,
             brand = "Rolex",
             model = "EXPLORER II",
@@ -79,7 +79,7 @@ class WatchRepositoryImpl : WatchRepository {
     override val page2 = listOf(
         Watch(
             id = 4,
-            image ="images/skx.jpg",
+            image ="/images/skx.jpg",
             rating = 2.8,
             brand = "Seiko",
             model = "SKX007K2",
@@ -98,7 +98,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 5,
-            image ="images/speedmaster.jpg",
+            image ="/images/speedmaster.jpg",
             rating = 4.9,
             brand = "Omega",
             model = "SPEEDMASTER MOONWATCH PROFESSIONAL",
@@ -117,7 +117,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 6,
-            image ="images/tsuyosa.jpg",
+            image ="/images/tsuyosa.jpg",
             rating = 4.0,
             brand = "Citizen",
             model = "Tsuyosa-NJ0150-56L",
@@ -138,7 +138,7 @@ class WatchRepositoryImpl : WatchRepository {
     override val page3 = listOf(
         Watch(
             id = 7,
-            image ="images/blackbay.jpg",
+            image ="/images/blackbay.jpg",
             rating = 4.3,
             brand = "Tudor",
             model = "Black bay 58",
@@ -157,7 +157,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 8,
-            image ="images/snk.jpg",
+            image ="/images/snk.jpg",
             rating = 5.0,
             brand = "Seiko",
             model = "SNK809",
@@ -176,7 +176,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 9,
-            image ="images/prx.jpg",
+            image ="/images/prx.jpg",
             rating = 3.6,
             brand = "Tissot",
             model = "Tissot PRX",
@@ -197,7 +197,7 @@ class WatchRepositoryImpl : WatchRepository {
     override val page4 = listOf(
         Watch(
             id = 10,
-            image ="images/luminar.jpg",
+            image ="/images/luminar.jpg",
             rating = 3.4,
             brand = "Panerai",
             model = "Luminor Marina",
@@ -216,7 +216,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 11,
-            image ="images/superocean.jpg",
+            image ="/images/superocean.jpg",
             rating = 4.4,
             brand = "Breitling",
             model = "SUPEROCEAN AUTOMATIC 42",
@@ -235,7 +235,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 12,
-            image ="images/cartier.jpg",
+            image ="/images/cartier.jpg",
             rating = 3.6,
             brand = "Cartier",
             model = "Tank",
@@ -256,7 +256,7 @@ class WatchRepositoryImpl : WatchRepository {
     override val page5 = listOf(
         Watch(
             id = 13,
-            image ="images/conquest.jpg",
+            image ="/images/conquest.jpg",
             rating = 3.9,
             brand = "Longines",
             model = "CONQUEST",
@@ -275,7 +275,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 14,
-            image ="images/ap.jpg",
+            image ="/images/ap.jpg",
             rating = 5.0,
             brand = "Audemars Piguet",
             model = "ROYAL OAK",
@@ -294,7 +294,7 @@ class WatchRepositoryImpl : WatchRepository {
         ),
         Watch(
             id = 15,
-            image ="images/hamilton.jpg",
+            image ="/images/hamilton.jpg",
             rating = 4.3,
             brand = "Hamilton",
             model = "KHAKI FIELD MECHANICAL 38MM",
@@ -319,7 +319,8 @@ class WatchRepositoryImpl : WatchRepository {
             message = "ok",
             prevPage = calculatePage(page = page)[PREVIOUS_PAGE_KEY],
             nextPage = calculatePage(page = page)[NEXT_PAGE_KEY],
-            watches = watches[page]!!
+            watches = watches[page]!!,
+            lastUpdated = System.currentTimeMillis()
         )
     }
 
